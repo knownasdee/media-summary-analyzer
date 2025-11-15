@@ -1,28 +1,11 @@
 # Media Summary Analyzer
 
-A minimal full-stack application that analyzes text by returning a short summary, sentiment score, and word count.
+App that analyzes text by returning a summary, sentiment score, and word count.
 
 ## Project Description
 
-This application provides a simple interface to analyze any text input, generating a summary (first 2 sentences), sentiment score (ranging from -1 to 1), and word count using FastAPI server with TextBlob for natural language processing and a React client with Redux Toolkit for state management.
+This app provides a simple interface for analyzing any text input, generating a summary (the first 2 sentences), a sentiment score (ranging from -1 to 1), and a word count, using a FastAPI server with TextBlob for natural language processing and a React client with Redux Toolkit for state management.
 
-## Project Structure
-
-```
-media-summary-analyzer/
-├── client/            # React + Vite + TypeScript + Redux Toolkit
-│   ├── src/
-│   │   ├── api/       # API client with Axios
-│   │   ├── store/     # Redux store and slices
-│   │   ├── components/# React components
-│   │   ├── pages/     # Page components
-│   │   └── types/     # TypeScript types
-│   └── package.json
-├── server/            # FastAPI application
-│   ├── main.py        # FastAPI app with /health and /analyze endpoints
-│   └── requirements.txt
-└── README.md
-```
 
 ## Prerequisites
 
@@ -174,43 +157,17 @@ Analyzes the provided text and returns summary, sentiment, and word count.
 ## Technologies Used
 
 ### Client
-- **React** - UI library
-- **TypeScript** - Type safety
-- **Vite** - Build tool and dev server
-- **Redux Toolkit** - State management
-- **Axios** - HTTP client
+- **React** 
+- **TypeScript**
+- **Vite**
+- **Redux**
+- **Axios**
 
 ### Server
-- **FastAPI** - Modern Python web framework
-- **TextBlob** - Natural language processing library
-- **Uvicorn** - ASGI server
-- **Pydantic** - Data validation
-
-## Development
-
-### Client Development
-- The client uses Vite for fast HMR (Hot Module Replacement)
-- Redux DevTools can be used to inspect state
-- TypeScript provides type checking
-
-### Server Development
-- FastAPI provides automatic API documentation at `/docs`
-- The server runs with auto-reload enabled (`--reload` flag)
-- CORS is configured to allow requests from `localhost:3000`
-
-## Troubleshooting
-
-### Server Issues
-
-- **TextBlob errors**: Make sure you've run `python -m textblob.download_corpora`
-- **Port already in use**: Change the port in `uvicorn main:app --reload --port 8001`
-- **Import errors**: Ensure your virtual environment is activated and dependencies are installed
-
-### Client Issues
-
-- **Connection refused**: Make sure the server is running on port 8000
-- **CORS errors**: Verify the server CORS middleware is configured correctly
-- **Build errors**: Try deleting `node_modules` and running `npm install` again
+- **FastAPI**
+- **TextBlob**
+- **Uvicorn**
+- **Pydantic**
 
 ## License
 
